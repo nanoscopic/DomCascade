@@ -9,14 +9,14 @@ var DomCascade = Class.create();
 DomCascade.prototype = {
     num: 10,
     initialize: function() {
-    }
+    },
     types: {
         html: function( ob ) {
             var dummy = _newel('div');
             dummy.innerHTML = ob.html;
             if( dummy.childNodes.length == 1 ) return { node: dummy.removeChild( dummy.firstChild ) };
-            var frag = document.createDocumentFragment();
-            while( var child = dummy.firstChild() ) frag.appendChild( child );
+            var child, frag = document.createDocumentFragment();
+            while( child = dummy.firstChild() ) frag.appendChild( child );
             return { node: frag };
         },
         text: function( ob ) {
@@ -153,7 +153,7 @@ DomCascade.prototype = {
         }
     },
     flow: function( ob ) {
-        if( lang.isArray( ob ) ) return this.flowArr( ob );
+        if( Array.isArray( ob ) ) return this.flowArr( ob );
         var name = ob.name;
         var typeF = this.types[ name ];
         var res = {};
