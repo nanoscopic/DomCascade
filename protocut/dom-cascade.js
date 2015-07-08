@@ -31,6 +31,10 @@ DomCascade.prototype = {
             node.src = ob.src;
             return { node: node };
         },
+        svg: function( ob ) {
+            var node = document.createElementNS("http://www.w3.org/2000/svg", ob.svg);
+            return { node: node };
+        },
         select: function( ob ) {
             var node  = _newel( 'select' );
             node.size = ob.size;
@@ -66,7 +70,7 @@ DomCascade.prototype = {
     },
     options: {
         ref: function( ob, res ) {
-            res.refs[ ob.ref ] = res;
+            res.refs[ ob.ref ] = res.node;
         },
         widget: function( ob, res ) {
             if( !res.widgets ) res.widgets = [];
