@@ -1,7 +1,7 @@
 {
   "name": "dom-cascade",
   "author": "David Helkowski",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "description": "JSON Cascading Structure DOM Element Creation",
   "main": "minlib/dom-cascade.js",

@@ -144,8 +144,8 @@ DomCascade.prototype = {
         return res;
     },
     replaceInner: function( node, ob ) {
-        domC.empty( node );
-        ml.all( node, this.flow( ob ).node );
+        ml.clear( node );
+        ml.app( node, this.flow( ob ).node );
     },
     flowArr: function( ob, func ) {
         var res = { node: [], refs: {} };
