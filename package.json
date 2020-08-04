@@ -1,7 +1,7 @@
 {
   "name": "dom-cascade",
   "author": "David Helkowski",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "license": "MIT",
   "description": "JSON Cascading Structure DOM Element Creation",
   "main": "minlib/dom-cascade.js",
@@ -17,7 +17,7 @@
   "scripts": {
   },
   "dependencies": {
-    "minlib": "https://github.com/nanoscopic/minlib.git#1.0.0"
+    "minlib": "https://github.com/nanoscopic/minlib.git#1.0.1"
   },
   "devDependencies": {
   }
