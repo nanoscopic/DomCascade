@@ -5,6 +5,14 @@
     Compatibility: IE9+, Chrome 7+, Firefox 4+, Safari 5.1.4+ ( bind and isArray )
       es5-shim could be used...
 */
+import MinLib from 'minlib';
+var Class = Class || {
+  create: function() {
+    return function() {
+      this.init.apply(this, arguments);
+    }
+  }
+};
 var ml = new MinLib();
 var DomCascade = Class.create();
 DomCascade.prototype = {
@@ -190,3 +198,5 @@ DomCascade.prototype = {
         }
     }
 };
+
+export default DomCascade;
